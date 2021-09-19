@@ -15,7 +15,7 @@ RUN apt-get install  -yqq \
 RUN wget -qO- https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 RUN apt-get update
-RUN apt-get install -yqq docker-ce docker-ce-cli containerd.io
+RUN apt-get install -yqq docker-ce docker-ce-cli containerd.io make
 
 ARG DOCKER_COMPOSE_VERSION=1.29.2
 
