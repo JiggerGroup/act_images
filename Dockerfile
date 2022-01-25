@@ -17,7 +17,7 @@ RUN wget -qO- https://download.docker.com/linux/debian/gpg | apt-key add - && \
 RUN apt-get update
 RUN apt-get install -yqq docker-ce docker-ce-cli containerd.io make
 
-ARG DOCKER_COMPOSE_VERSION=1.29.2
+ARG DOCKER_COMPOSE_VERSION
 
 # Install docker-compose
 RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
